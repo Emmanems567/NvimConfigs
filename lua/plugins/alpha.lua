@@ -5,11 +5,9 @@ return {
 		local alpha = require("alpha")
 		local dashboard = require("alpha.themes.dashboard")
 
-		-- 🎨 Cambiar color del encabezado y recientes
-		vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#89B4FA", bold = true }) -- Azul claro (Catppuccin Blue)
+		vim.api.nvim_set_hl(0, "AlphaHeader", { fg = "#89B4FA", bold = true }) -- (Catppuccin Blue)
 		vim.api.nvim_set_hl(0, "AlphaRecent", { fg = "#89B4FA" })
 
-		-- 🖼 Encabezado personalizado
 		dashboard.section.header.val = {
 			[[⠀⠀⠀⠀⠀⠀⠀⢀⠠⠤⠤⠤⠤⠤⠄⣀⡀⠀⠀⠀⠀⠀⠀⠀⠀⠀]],
 			[[⠀⠀⠀⠀⠀⡠⠊⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠉⠑⠢⢄⠀⠀⠀⠀]],
@@ -33,7 +31,6 @@ return {
 			hl = "AlphaHeader",
 		}
 
-		-- 📂 Archivos recientes
 		local function get_recent_files()
 			local oldfiles = vim.v.oldfiles
 			local recent = {}
@@ -59,14 +56,11 @@ return {
 			hl = "AlphaRecent",
 		}
 
-		-- 🧼 Limpiar botones
 		dashboard.section.buttons.val = {}
 
-		-- 📏 Centrado y márgenes
 		dashboard.opts.layout[1].val = 8
 		dashboard.opts.opts.margin = 5
 
-		-- 🚀 Inicializa
 		alpha.setup(dashboard.opts)
 	end,
 }
