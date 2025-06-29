@@ -26,8 +26,6 @@ vim.opt.mouse = "a"
 vim.opt.termguicolors = true
 vim.opt.clipboard = "unnamedplus"
 
-
-
 require("lazy").setup({
   spec = {
     { import = "plugins" },

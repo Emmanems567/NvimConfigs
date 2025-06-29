@@ -1,6 +1,6 @@
 return {
   "nvim-treesitter/nvim-treesitter",
-  branch = 'master',
+  branch = "master",
   lazy = false,
   build = ":TSUpdate",
   config = function()
@@ -8,6 +8,7 @@ return {
       auto_install = true,
       highlight = { enable = true },
       indent = { enable = true },
+      rainbow = { enable = true },
     })
   end,
 }
